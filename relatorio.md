@@ -25,11 +25,9 @@ Relatório de Testes
   - Testes de integração precisam ser melhorados para aumentar a cobertura.
   - Pequenas diferenças de acentuação ou formatação podem causar falhas inesperadas.
 
-## Correções realizadas no código da calculadora
+• Correções realizadas no código da calculadora
 
 - Corrigida a formatação do histórico das operações para remover espaços, conforme esperado pelos testes.
 - Padronizada a mensagem de erro de divisão por zero para não usar acentos, garantindo compatibilidade com os testes.
-- Adicionado tratamento no método `potencia` para lançar erro quando a base for negativa e o expoente for fracionário, conforme esperado pelos testes.
+- Adicionado tratamento no método potencia para lançar erro quando a base for negativa e o expoente for fracionário, conforme esperado pelos testes.
 - Corrigida a indentação da classe e métodos após erro causado por remoção de import.
-
-Essas correções garantem que os testes unitários possam ser executados corretamente e que o código esteja alinhado com os requisitos dos testes.
