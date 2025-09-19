@@ -1,4 +1,3 @@
-import math
 
 class Calculadora:
     def __init__(self):
@@ -9,7 +8,7 @@ class Calculadora:
         if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
             raise TypeError("Argumentos devem ser números.")
         resultado = a + b
-        self.historico.append(f"{a} + {b} = {resultado}")
+        self.historico.append(f"{a}+{b}={resultado}")
         self.resultado = resultado
         return resultado
 
@@ -17,7 +16,9 @@ class Calculadora:
         if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
             raise TypeError("Argumentos devem ser números.")
         resultado = a - b
-        self.historico.append(f"{a} - {b} = {resultado}")
+        self.historico.append(f"{a}-{b}={resultado}")
+        self.resultado = resultado
+        return resultado
         self.resultado = resultado
         return resultado
 
@@ -25,7 +26,7 @@ class Calculadora:
         if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
             raise TypeError("Argumentos devem ser números.")
         resultado = a * b
-        self.historico.append(f"{a} * {b} = {resultado}")
+        self.historico.append(f"{a}*{b}={resultado}")
         self.resultado = resultado
         return resultado
 
@@ -33,17 +34,19 @@ class Calculadora:
         if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
             raise TypeError("Argumentos devem ser números.")
         if b == 0:
-            raise ValueError("Divisão por zero não permitida.")
+            raise ValueError("Divisao por zero nao permitida")
         resultado = a / b
-        self.historico.append(f"{a} / {b} = {resultado}")
+        self.historico.append(f"{a}/{b}={resultado}")
         self.resultado = resultado
         return resultado
 
     def potencia(self, base, expoente):
         if not isinstance(base, (int, float)) or not isinstance(expoente, (int, float)):
             raise TypeError("Argumentos devem ser números.")
+        if base < 0 and isinstance(expoente, float) and not expoente.is_integer():
+            raise ValueError("Potencia com base negativa e expoente fracionario nao e real.")
         resultado = base ** expoente
-        self.historico.append(f"{base} ^ {expoente} = {resultado}")
+        self.historico.append(f"{base}^{expoente}={resultado}")
         self.resultado = resultado
         return resultado
 
@@ -51,4 +54,4 @@ class Calculadora:
         self.historico.clear()
 
     def obter_ultimo_resultado(self):
-        return self.resultado
+    return self.resultado
