@@ -5,6 +5,8 @@ Relatório de Testes
   - 6 testes passaram, 5 falharam e 12 apresentaram erros.
 
 • Cobertura de código obtida:
+
+
 <img width="358" height="94" alt="Captura de Tela 2025-09-19 às 19 58 31" src="https://github.com/user-attachments/assets/52ea673e-b2ba-4bb7-9620-15557fa89ddf" />
 
 
